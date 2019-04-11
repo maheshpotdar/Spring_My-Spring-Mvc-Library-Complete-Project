@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+
+.heading {
+	background-color: red;
+	height: 20px;
+	width: 20px;
+	opacity: 60%;
+	float: center;
+	z-index: -1;
+}
+
+.body {
+	background-color: yellow;
+}

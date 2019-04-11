@@ -1,0 +1,18 @@
+methd la pathavtana
+1.
+<form:form action="/SpringLibrary/updatelibs/${beanLibrarian2.id}
+/project name/method name
+
+
+@RequestMapping(value = "/updatelibs/{userId}", method = RequestMethod.POST)
+	public String UpdateEmpFormAction(@PathVariable("userId") int userId,
+			@ModelAttribute("beanLibrarian2") BeanLibrarian beanLibrarian2, ModelMap modelMap) {
+		int val = dbcon.updateLib(beanLibrarian2, userId);
+		//
+		System.out.println("145: val: " + val);
+		if (val > 0)
+			return "redirect:/viewlib";
+		else
+			return "redirect:/failed";
+	}
+	user redirect for send to another page.
